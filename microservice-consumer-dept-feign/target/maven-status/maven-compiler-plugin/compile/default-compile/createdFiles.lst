@@ -1,0 +1,6 @@
+com\whstone\service\DeptClientServiceFallbackFactory$1.class
+com\whstone\DeptConsumer80FeignApp.class
+com\whstone\service\DeptClientService.class
+com\whstone\config\ConfigBean.class
+com\whstone\controller\ConsumerDeptController.class
+com\whstone\service\DeptClientServiceFallbackFactory.class

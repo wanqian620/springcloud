@@ -1,0 +1,5 @@
+D:\BaiduYunDownload\springcloud\codes\springcloud\microservice-consumer-dept-feign\src\main\java\com\whstone\config\ConfigBean.java
+D:\BaiduYunDownload\springcloud\codes\springcloud\microservice-consumer-dept-feign\src\main\java\com\whstone\DeptConsumer80FeignApp.java
+D:\BaiduYunDownload\springcloud\codes\springcloud\microservice-consumer-dept-feign\src\main\java\com\whstone\service\DeptClientServiceFallbackFactory.java
+D:\BaiduYunDownload\springcloud\codes\springcloud\microservice-consumer-dept-feign\src\main\java\com\whstone\controller\ConsumerDeptController.java
+D:\BaiduYunDownload\springcloud\codes\springcloud\microservice-consumer-dept-feign\src\main\java\com\whstone\service\DeptClientService.java
