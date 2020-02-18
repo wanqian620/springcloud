@@ -2,13 +2,13 @@ package com.whstone;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.config.server.EnableConfigServer;
 
 @SpringBootApplication
-//@EnableEurekaClient
-//@EnableDiscoveryClient
-public class DeptProvier8001App {
+@EnableConfigServer
+public class config3344App {
 
     public static void main(String[] args) {
-        SpringApplication.run(DeptProvier8001App.class, args);
+        SpringApplication.run(config3344App.class, args);
     }
 }

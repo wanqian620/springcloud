@@ -17,6 +17,8 @@
         <module>microservice-eureka-7001</module>
         <module>microservice-eureka-7002</module>
         <module>microservice-consumer-hystrix-dashboard</module>
+        <module>microservice-zuul-gateway-9527</module>
+        <module>microservice-config-3344</module>
     </modules>
 
     <properties>

@@ -1,0 +1,11 @@
+service:
+  port: 3344
+
+spring:
+  application:
+    name: microservice-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:wanqian620/springCloudConfig.git

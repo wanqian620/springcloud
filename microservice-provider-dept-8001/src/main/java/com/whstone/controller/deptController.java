@@ -3,6 +3,7 @@ package com.whstone.controller;
 import com.whstone.entities.Dept;
 import com.whstone.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
@@ -54,5 +55,21 @@ public class deptController {
         return this.client;
     }
 
+    @Value("${spring.application.name}")
+    private String applicationName;
+
+    @Value("${eureka.client.service-url.defaultZone}")
+    private String eurekaServers;
+
+    @Value("${server.port}")
+    private String port;
+
+    @RequestMapping("/config")
+    public String getConfig()
+    {
+        String str = "applicationName: "+applicationName+"\t eurekaServers:"+eurekaServers+"\t port: "+port;
+        System.out.println("******str: "+ str);
+        return "applicationName: "+applicationName+"\t eurekaServers:"+eurekaServers+"\t port: "+port;
+    }
 
 }

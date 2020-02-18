@@ -1,0 +1,34 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: microservice-zuul-gateway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka
+  instance:
+    instance-id: gateway-9527.com
+    prefer-ip-address: true
+
+info:
+  app.name: whstone-microcloud
+  company.name: www.whstone.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+
+#路由访问映射
+zuul:
+#  设置统一前缀
+  prefix: /whstone
+#  屏蔽原服务名访问
+  ignored-service: microservice-dept
+#  屏蔽所有服务名
+#  ignored-service: *
+  routes:
+#    默认可通过服务名访问,也可设置访问映射规则
+#    http://localhost:9527/mydept/dept/get/1:
+    mydept.serviceId: microservice-dept
+    mydept.path: /mydept/**
