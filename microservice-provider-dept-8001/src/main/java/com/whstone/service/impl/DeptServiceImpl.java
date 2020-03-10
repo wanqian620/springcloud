@@ -1,35 +1,37 @@
 package com.whstone.service.impl;
 
-import com.whstone.dao.DeptDao;
 import com.whstone.entities.Dept;
+import com.whstone.mapper.DeptMapper;
 import com.whstone.service.DeptService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @Service
 public class DeptServiceImpl implements DeptService {
 
 
-    @Autowired
-    private DeptDao dao;
+//    @Autowired
+//    private DeptDao dao;
+    @Resource
+    private DeptMapper deptMapper;
 
     @Override
-    public boolean add(Dept dept)
+    public int add(Dept dept)
     {
-        return dao.addDept(dept);
+        return deptMapper.insert(dept);
     }
 
     @Override
     public Dept get(Long id)
     {
-        return dao.findById(id);
+        return deptMapper.selectByPrimaryKey(id);
     }
 
     @Override
     public List<Dept> list()
     {
-        return dao.findAll();
+        return deptMapper.selectAll();
     }
 }

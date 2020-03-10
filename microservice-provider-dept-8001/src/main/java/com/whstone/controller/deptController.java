@@ -8,6 +8,7 @@ import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
@@ -16,11 +17,14 @@ public class deptController {
     @Autowired
     private DeptService service;
 
-    @Autowired
+    @Resource
     private DiscoveryClient client;
 
+//    @Autowired
+//    private DeptMapper deptMapper;
+
     @RequestMapping(value = "/dept/add", method = RequestMethod.POST)
-    public boolean add(@RequestBody Dept dept)
+    public int add(@RequestBody Dept dept)
     {
         return service.add(dept);
     }
@@ -44,6 +48,8 @@ public class deptController {
     @RequestMapping(value = "/dept/discovery", method = RequestMethod.GET)
     public Object discovery()
     {
+//        Dept dept = deptMapper.selectByPrimaryKey(1);
+
         List<String> list = client.getServices();
         System.out.println("**********" + list);
 

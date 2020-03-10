@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface DeptService {
 
-     boolean add(Dept dept);
+     int add(Dept dept);
 
      Dept get(Long id);
 
